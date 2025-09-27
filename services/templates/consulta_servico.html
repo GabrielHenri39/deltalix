@@ -35,7 +35,7 @@
               <form action="{% url 'consulta_servico' %}" method="post" class="mt-4">
                 {% csrf_token %}
                 <div class="input-group mb-3">
-                    <input type="text" name="protocolo" class="form-control" placeholder="Digite o número do protocolo" required>
+                    <input type="text" name="protocolo" class="form-control proto" placeholder="Digite o número do protocolo" required>
                     <br>
                     <button type="submit" class="btn btn-success">Buscar</button>
                 </div>
@@ -82,6 +82,13 @@
   </div>
 </div>
 {% endblock   %}
+
+{% block scripts %}
+  
+  <script src="{% static 'services/js/jquery.mask.js' %}"></script>
+  <script src="{% static 'services/js/mask.js' %}"></script>
+{% endblock scripts %}
+
 {% block footer %}
   {% include 'partials/footer_m.html' %}
 {% endblock footer %}

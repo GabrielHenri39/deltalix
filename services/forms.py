@@ -36,16 +36,16 @@ class ServicoForm(forms.ModelForm):
             "cep", "cidade", "bairro", "rua", "numero", "complemento"
         ]
         widgets = {
-            "nome": forms.TextInput(attrs={"class": "form-control", "placeholder": "Digite o nome do serviço"}),
+            "nome": forms.TextInput(attrs={"class": "form-control", "placeholder": "Digite o nome completo"}),
             "descricao": forms.Textarea(attrs={"class": "form-control", "rows": 3, "placeholder": "Descreva o serviço"}),
-            "cep": forms.TextInput(attrs={"class": "form-control", "id": "id_cep", "placeholder": "Digite o CEP"}),
+            "cep": forms.TextInput(attrs={"class": "form-control cep", "id": "id_cep", "placeholder": "Digite o CEP"}),
             "cidade": forms.TextInput(attrs={"class": "form-control", "id": "id_cidade"}),
             "bairro": forms.TextInput(attrs={"class": "form-control", "id": "id_bairro"}),
             "rua": forms.TextInput(attrs={"class": "form-control", "id": "id_rua"}),
             "numero": forms.TextInput(attrs={"class": "form-control", "placeholder": "Número"}),
             "complemento": forms.TextInput(attrs={"class": "form-control", "placeholder": "Complemento (opcional)"}),
             "email": forms.EmailInput(attrs={"class": "form-control", "placeholder": "exemplo@email.com"}),
-            "telefone": forms.TextInput(attrs={"class": "form-control", "placeholder": "(99) 99999-9999"}),
+            "telefone": forms.TextInput(attrs={"class": "form-control tel", "placeholder": "(99) 99999-9999"}),
             "categoria": forms.SelectMultiple(attrs={"class": "form-control select2"}),
         }
 
