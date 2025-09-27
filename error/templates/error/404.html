@@ -2,12 +2,12 @@
 {% load static %}
 {% block 'title' %}Página Não Encontrada{% endblock %}
 {% block 'head' %}{% endblock 'head' %}
-{% block content %}
-
 {% block nav %}
   {% include "partials/navebar.html" %}
 
 {% endblock nav %}
+{% block content %}
+
 
 <div class="container text-center mt-5">
     <h1 class="display-4">404 - Página Não Encontrada</h1>
@@ -15,3 +15,8 @@
     <a href="{% url 'home' %}" class="btn btn-primary">Voltar para a Página Inicial</a>
 </div>
 {% endblock content %}
+
+{% block footer %}
+  {% include "partials/footer_m.html" %}
+  
+{% endblock footer %}

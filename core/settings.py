@@ -55,6 +55,7 @@ INSTALLED_APPS = [
     'home.apps.HomeConfig',
     'services.apps.ServicesConfig',
     'error.apps.ErrorConfig',
+    'django.contrib.sitemaps',
     
 
 ]
