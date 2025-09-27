@@ -1,0 +1,17 @@
+{% extends "base/base.html" %}
+{% load static %}
+{% block 'title' %}Página Não Encontrada{% endblock %}
+{% block 'head' %}{% endblock 'head' %}
+{% block content %}
+
+{% block nav %}
+  {% include "partials/navebar.html" %}
+
+{% endblock nav %}
+
+<div class="container text-center mt-5">
+    <h1 class="display-4">404 - Página Não Encontrada</h1>
+    <p class="lead">Desculpe, a página que você está procurando não existe.</p>
+    <a href="{% url 'home' %}" class="btn btn-primary">Voltar para a Página Inicial</a>
+</div>
+{% endblock content %}

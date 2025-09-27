@@ -1,0 +1,50 @@
+[
+    {
+        "model": "services.categoriaservico",
+        "fields": {
+            "nome": "Coleta, Transporte e Destinação Final.",
+            "descricao": "Realizamos a coleta e o transporte seguros de diversos tipos de resíduos sólidos, garantindo o envio para a destinação final ambientalmente adequada, em conformidade com todas as normas.",
+            "slug": "coleta-transporte-e-destinacao-final"
+        }
+    },
+    {
+        "model": "services.categoriaservico",
+        "fields": {
+            "nome": "Comercialização de Materiais Recicláveis.",
+            "descricao": "Compra e venda de resíduos recicláveis com valor comercial.",
+            "slug": "comercializacao-de-materiais-reciclaveis"
+        }
+    },
+    {
+        "model": "services.categoriaservico",
+        "fields": {
+            "nome": "Destruição Segura de Materiais Confidenciais.",
+            "descricao": "Prestamos serviços de destruição de documentos confidenciais, CDs, DVDs, disquetes, computadores e eletrônicos em geral, assegurando a inviolabilidade das informações e o descarte correto dos materiais.",
+            "slug": "destruicao-segura-de-materiais-confidenciais"
+        }
+    },
+    {
+        "model": "services.categoriaservico",
+        "fields": {
+            "nome": "Descarte de Lâmpadas, Pilhas e Baterias.",
+            "descricao": "Realizamos a coleta e destinação ambientalmente correta de lâmpadas, pilhas e baterias, produtos que demandam tratamento especial devido aos seus componentes químicos.",
+            "slug": "descarte-de-lampadas-pilhas-e-baterias"
+        }
+    },
+    {
+        "model": "services.categoriaservico",
+        "fields": {
+            "nome": "Tratamento de Resíduos",
+            "descricao": "Conjunto de unidades, processos e procedimentos que alteram as características físicas, físico-químicas, químicas ou biológicas dos resíduos (reprocessamento, reciclagem, descontaminação, incorporação, co-processamento, re-refino, incineração, entre outros).",
+            "slug": "tratamento-de-residuos"
+        }
+    },
+    {
+        "model": "services.categoriaservico",
+        "fields": {
+            "nome": "Destinação Final",
+            "descricao": "Conjunto de instalações, processos e procedimentos que visam a destinação ambientalmente adequada dos resíduos, incluindo disposição em aterros sanitários ou industriais, de acordo com as características e classificação de cada tipo de resíduo.",
+            "slug": "destinacao-final"
+        }
+    }
+]

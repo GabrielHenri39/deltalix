@@ -1,0 +1,28 @@
+{% extends "base/base.html" %}
+{% load static %}
+
+{% block 'title' %}Área adm{% endblock 'title' %}
+
+{% block 'head' %}
+<link rel="stylesheet" href="{% static 'auteticacao/css/style.css' %}">
+{% endblock 'head' %}
+
+{% block nav %}
+  {% include "partials/navbard.html" %}
+{% endblock nav %}
+
+{% block content %}
+<div class="container mt-5">
+
+    {% include 'partials/filtros.html' %}
+    <h2>Serviços</h2>
+    <div id="servicos-tabela"></div>
+    <nav id="paginacao"></nav>
+</div>
+
+<!-- Importa o JS separado -->
+
+{% endblock %}
+{% block scripts %}
+<script src="{% static 'auteticacao/js/list.js' %}"></script>
+{% endblock %}

@@ -1,0 +1,47 @@
+{% extends 'base/base.html' %}
+{% load static %}
+
+{% block 'title' %}contato{% endblock 'title' %}
+
+{% block 'head' %}
+    <link rel="stylesheet" href="{% static 'home/css/home.css' %}">
+{% endblock 'head' %}
+
+{% block nav %}
+  {% include 'partials/navebar.html' %}
+{% endblock nav %}
+
+{% block content %}
+<section class="container py-5">
+  <div class="row align-items-center">
+    
+    <!-- Coluna com texto -->
+    <div class="col-12 col-md-6 text-center text-md-start">
+      <h1 class="fw-bold text-success mb-3">DELTALIX AMBIENTAL</h1>
+      <p class="lead mb-4">
+        Quer saber como podemos ajudar sua empresa a gerenciar seus resíduos de forma sustentável e segura?<br>
+        Entre em contato conosco: 
+        <a href="mailto:atendimento@deltalixambiental.com.br" class="text-success fw-semibold">
+          atendimento@deltalixambiental.com.br
+        </a>
+      </p>
+      <a href="mailto:atendimento@deltalixambiental.com.br" class="btn btn-success btn-lg px-4">
+        📩 Fale Conosco
+      </a>
+    </div>
+
+     
+    <div class="col-12 col-md-6 text-center mt-4 mt-md-0 img-container">
+  <img src="{% static 'home/img/ambiental.webp' %}" 
+       alt="Sustentabilidade" 
+       class="img-fluid rounded shadow">
+</div>
+
+
+  </div>  
+</section>
+{% endblock %}
+{% block footer %}
+  {% include 'partials/footer_m.html' %}
+{% endblock footer %}
+

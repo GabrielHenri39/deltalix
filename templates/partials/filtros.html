@@ -1,0 +1,41 @@
+<form id="filtro-servicos" class="row g-3 mb-3">
+    <!-- Nome -->
+    <div class="col-md-3">
+        <input type="text" name="nome" class="form-control" placeholder="Buscar por nome">
+    </div>
+
+    <!-- Status -->
+    <div class="col-md-3">
+        <select name="status" class="form-select">
+            <option value="">Todos os Status</option>
+            <option value="em_analise">Em Análise</option>
+            <option value="em_andamento">Em andamento</option>
+            <option value="concluido">Concluído</option>
+            <option value="cancelado">Cancelado</option>
+        </select>
+    </div>
+
+    <!-- Categorias (múltipla seleção com Select2) -->
+    
+    <div class="col-md-4">
+        <select name="categorias" id="categorias" class="form-select" multiple>
+            {% for c in categorias %}
+                <option value="{{ c.id }}">{{ c.nome }}</option>
+            {% endfor %}
+        </select>
+    </div>
+
+    <!-- Datas -->
+    <div class="col-md-2">
+        <input type="date" name="data_inicio" class="form-control">
+    </div>
+    <div class="col-md-2">
+        <input type="date" name="data_fim" class="form-control">
+    </div>
+
+    <!-- Botões -->
+    <div class="col-md-3 d-flex gap-2">
+        <button type="submit" class="btn btn-success">Filtrar</button>
+        <button type="reset" class="btn btn-outline-secondary">Limpar</button>
+    </div>
+</form>

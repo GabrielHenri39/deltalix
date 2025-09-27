@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /admin/
+Disallow: /auth/
+Disallow: /mail/
+
+
+Sitemap: https://www.deltalixambiental.com.br/sitemap.xml

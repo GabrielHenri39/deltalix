@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block title %}Erro 400 - Requisição Inválida{% endblock %}
+
+{% block content %}
+<div class="container text-center mt-5">
+    <h1 class="display-4 text-danger">Erro 400</h1>
+    <p class="lead">A requisição não pôde ser processada.</p>
+    <p>Verifique os filtros ou dados enviados e tente novamente.</p>
+
+    <a href="{% url 'home' %}" class="btn btn-success mt-3">Voltar ao home</a>
+</div>
+{% endblock %}

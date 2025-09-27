@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+    --color-primary: #2B943F;
+    --color-secondary: #2D5439;
+    --color-tertiary: #3f2727;
+    --color-quaternary: #942C2B;
+}
+
+.nomeempresa{
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: 900;
+    color: var(--color-primary);
+
+}
+.nomeempresa:hover{
+    color: var(--color-secondary);
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #ffffff;
+}
+.nav-bar-p{
+    background-color: #e0e0e0;
+    padding: 10px;
+}
+.nav-bar-p-a{
+    color: var(--color-primary);
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.nav-bar-p-a:hover{
+    color: var(--color-secondary);
+}
+
+.navbar-toggler{
+    border: none !important;
+    box-shadow: none !important;
+}
+
+.navbar-toggler:focus{
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='%232B943F' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+.lead-p{
+    font-size: 1.25rem;
+    
+}
+
+/* footer claro */
+.footer-light {
+  background: #ffffff;
+  border-top: 1px solid #e9ecef;
+  color: #333;
+  font-size: 0.95rem;
+}
+.footer-light .footer-logo {
+  width: 44px;
+  height: auto;
+  object-fit: contain;
+}
+.footer-light .footer-link {
+  margin: 0 .5rem;
+  color: #2b943f;
+  text-decoration: none;
+}
+.footer-light .footer-link:hover { text-decoration: underline; opacity: .9; }
+.footer-light .social-link { margin-left: .5rem; text-decoration:none; font-size:1.05rem; }
+
+footer{
+    margin-top: 2rem;
+    border-top: 10px !important;
+    padding-bottom: 10px !important;
+    font-size: 0.95rem;
+}
+@media (max-width: 767px) {
+  .footer-light .footer-nav { order: 3; }
+  .footer-light .footer-actions { order: 2; }
+  .footer-light .footer-brand { order: 1; }
+}
+@media (min-width: 768px) {
+  .footer-light .footer-nav { margin-left: auto; }
+}
+@media (min-width: 992px) {
+  .footer-light { font-size: 1rem; }
+  .footer-light .footer-link { margin: 0 1rem; }
+  .footer-light .social-link { font-size: 1.25rem; }
+}

@@ -1,0 +1,28 @@
+<!-- partials/footer_minimal.html -->
+{% load static %}
+<footer class="site-footer footer-light">
+  <div class="container py-4 d-flex flex-column flex-md-row align-items-center justify-content-between gap-3">
+    <div class="footer-brand d-flex align-items-center gap-2">
+      <img src="{% static 'common/img/logo_mini.png' %}" alt="Logo" class="footer-logo">
+      <div>
+        <strong class="d-block">DELTALIX AMBIENTAL</strong>
+        <small class="text-muted">Gestão e destino de resíduos</small>
+      </div>
+    </div>
+
+    <nav class="footer-nav text-center text-md-start">
+      <a href="{% url 'home' %}" class="footer-link">Início</a>
+      <a href="{% url 'service_list' %}" class="footer-link">Serviços</a>
+      <a href="{% url 'contato' %}" class="footer-link">Contato</a>
+      <a href="{% url 'consulta_servico' %}" class="footer-link">Consulta</a>
+    </nav>
+
+    <div class="footer-actions text-center text-md-end">
+     © <span id="currentYear"></span> DELTALIX - Todos os direitos</small>
+    </div>
+  </div>
+</footer>
+<script>
+  // Atualiza o ano automaticamente
+   document.getElementById('currentYear')?.replaceWith(document.createTextNode(new Date().getFullYear()));
+</script>

@@ -1,0 +1,123 @@
+.select2-selection{
+    border-radius: 6px !important;
+    border: 1px solid #ced4da !important;
+    padding: 0.375rem 0.75rem;
+}
+
+.form-label{
+    display: block;
+    font-weight: 600;
+    color: #2c662b;
+    margin-bottom: 4px;
+    text-align: left;
+}
+input, select, textarea {
+    width: 100%;
+    border-radius: 6px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: #198754; /* Verde Bootstrap */
+  box-shadow: 0 0 0 0.2rem rgba(25, 135, 84, 0.25);
+}
+
+button.btn-success {
+  padding: 10px 20px;
+  font-size: 1.1rem;
+  border-radius: 6px;
+}
+
+.formulario-bg {
+    background: linear-gradient(135deg, #e6f7ff, #d4f4dd); /* azul claro p/ verde claro */
+    border: none;
+    border-radius: 12px;
+    padding: 25px;
+    max-width: 600px;
+    margin: 0 auto;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); /* sombra suave */
+}
+.carousel-item img {
+  max-height: 400px;   /* altura máxima das imagens */
+  object-fit: cover;  /* corta e centraliza a imagem para preencher */
+  display: block;
+
+  border:none;
+  border-radius: 12px; /* bordas arredondadas */
+}
+
+.custom-carousel {
+  border: none; 
+  border-radius: 16px; /* bordas mais suaves */
+  overflow: hidden; /* esconde partes que ultrapassam */
+  background: linear-gradient(135deg, #e6f7ff, #d4f4dd); /* gradiente de fundo */
+  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.15); /* sombra mais destacada */
+  max-width: 960px; /* limita largura */
+  margin: 0 auto; /* centraliza */
+  padding: 12px; /* espaço interno */
+}
+
+.carousel-item{
+  position: relative;
+  min-height: 320px;
+  background: linear-gradient(135deg, #e6f7ff, #d4f4dd); /* gradiente de fundo */
+}
+
+@media (max-width: 768px) {
+  .custom-carousel img {
+    height: 300px; /* altura menor no celular */
+  }
+}
+
+.anexos-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 10px;
+}
+
+.anexo-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 12px;
+  background: #e9e9e9;
+  width: 220px;
+  text-align: center;
+  transition: 0.3s;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.anexo-card:hover {
+  background: #bebebe;
+  transform: scale(1.03);
+}
+
+.anexo-card .icon {
+  font-size: 30px;
+  display: block;
+  margin-bottom: 8px;
+}
+
+
+.anexo-card a {
+  text-decoration: none;
+  color: #2c3e50;
+  font-size: 16px;
+  word-wrap: break-word;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.anexo-card a:hover {
+  color: #28a745;
+}
+
+.anexo-card p {
+  margin-top: 4px;
+}

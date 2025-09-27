@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Cancelar serviço</title>
+</head>
+<body style="margin:0; padding:0; background-color:#f7f7f7; font-family: Arial, sans-serif;">
+  <table width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:#f7f7f7; padding:20px;">
+    <tr>
+      <td align="center">
+        <table width="600" cellpadding="0" cellspacing="0" border="0" style="background:#fff; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.1); padding:20px;">
+          <tr>
+            <td align="left" style="font-size:20px; font-weight:bold; color:#2B943F;">
+              Cancelar serviço
+            </td>
+          </tr>
+          <tr>
+            <td style="font-size:15px; color:#333; padding-top:15px;">
+              <p>Olá <strong>{{ nome }}</strong>,</p>
+              <p>Você solicitou o cancelamento do serviço:</p>
+              <p><strong>Protocolo:</strong> {{ protocolo }}</p>
+              <p>Para confirmar, clique no botão abaixo.<br>
+              O link expira em <strong>15 minutos</strong>.</p>
+            </td>
+          </tr>
+          <tr>
+            <td align="center" style="padding:20px 0;">
+              <a href="{{ link }}" 
+                 style="display:inline-block; background-color:#2B943F; color:#fff; padding:12px 20px; 
+                        text-decoration:none; border-radius:6px; font-weight:bold;">
+                Cancelar Serviço
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <td align="center" style="font-size:12px; color:#777; padding-top:30px;">
+              <p>Se não foi você que solicitou, ignore este e-mail.</p>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</body>
+</html>

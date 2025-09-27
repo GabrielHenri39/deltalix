@@ -1,0 +1,74 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+body {
+  background:  #f4f6f8;
+}
+
+/* Centralizar e ajustar espaçamento da página de login */
+.login-container {
+  padding-top: 50px;   /* menos espaço acima */
+  padding-bottom: 50px;
+  min-height: 100vh;   /* ocupa toda a altura da tela */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+/* Card do login */
+.login-card {
+  padding: 25px;
+  border-radius: 15px;
+
+  background: #ffffff;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* Título */
+.login-title {
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+/* Botão */
+.login-btn {
+  background: #28a745;
+  border: none;
+  transition: 0.3s;
+}
+
+.login-btn:hover {
+  background: #218838;
+  transform: translateY(-2px);
+}
+
+/* Link (Esqueci minha senha) */
+.login-link {
+  color: #28a745;
+  font-weight: 500;
+  transition: 0.2s;
+}
+
+.login-link:hover {
+  color: #1e7e34;
+  text-decoration: underline;
+}
+
+.input-group-text {
+  background: #f8f9fa;
+  border-right: none;
+}
+
+.input-group .form-control {
+  border-left: none;
+}
+
+.input-group .form-control:focus {
+  box-shadow: none;
+  border-color: #28a745;
+}

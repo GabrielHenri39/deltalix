@@ -1,0 +1,25 @@
+<nav class="navbar navbar-expand-lg  px-4 nav-bar-p ">
+  <a class="navbar-brand nomeempresa" href="{% url 'home' %}">DELTALIX AMBIENTAL
+  </a>
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNav">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="menuNav">
+    <ul class="navbar-nav ms-auto">
+      <li class="nav-item">
+        <a class="nav-link nav-bar-p-a" href="{% url 'home' %}">Início</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link nav-bar-p-a" href="{% url 'service_list' %}">Serviços</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link nav-bar-p-a" href="{% url 'contato' %}">Contato</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link nav-bar-p-a" href="{% url 'consulta_servico' %}">Consulta</a>
+      </li>
+
+    </ul>
+  </div>
+</nav>

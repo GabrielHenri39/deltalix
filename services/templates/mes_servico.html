@@ -1,0 +1,36 @@
+{% extends 'base/base.html' %}
+{% load static %}
+
+{% block 'title' %}Solicitação registrada{% endblock 'title' %}
+
+{% block content %}
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+        <div class="card shadow p-4">
+            <div class="card-body text-center">
+                <h2 class="mb-4 text-success">✅ Solicitação registrada com sucesso!</h2>
+                
+                {% if servico.nome %}
+                    <p class="lead">Olá, <strong>{{ servico.nome }}</strong>!</p>
+                {% endif %}
+
+                <p class="lead mb-4">
+                    Seu protocolo é: 
+                    <span class="badge bg-primary fs-5">{{ servico.protocolo}}</span><br>
+                    Use esse código para acompanhar o andamento da sua solicitação.
+                </p>
+
+                <p class="text-muted mb-4">
+                    Nossa equipe analisará sua solicitação e entrará em contato o mais breve possível.
+                </p>
+
+                <a href="{% url 'service_list' %}" class="btn btn-outline-primary">
+                    Ver minhas solicitações
+                </a>
+            </div>
+        </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

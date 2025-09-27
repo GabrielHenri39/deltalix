@@ -1,0 +1,87 @@
+{% extends "base/base.html" %}
+{% load static %}
+{% load custom_filters %}
+ 
+{% block 'title' %}Consultar o serviço(os){% endblock 'title' %}
+ 
+{% block 'head' %}
+  <link rel="stylesheet" href="{% static 'services/css/service.css' %}">
+  <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+  
+{% endblock 'head' %}
+ 
+{% block nav %}
+  {% include "partials/navebar.html" %}
+{% endblock nav %}
+ 
+{% block content %}
+<div class="container py-5">
+  <div class="row justify-content-center">
+    <div class="col-12 col-md-10 col-lg-8 text-center">     
+        {% if messages %}
+            <div class="mb-3">
+            {% for message in messages %}
+                <div class="alert {{ message.tags }} text-center">
+                {{ message }}
+                </div>
+            {% endfor %}
+            </div>
+        {% endif %}
+             
+        
+        <div>
+              <form action="{% url 'consulta_servico' %}" method="post" class="mt-4">
+                {% csrf_token %}
+                <div class="input-group mb-3">
+                    <input type="text" name="protocolo" class="form-control" placeholder="Digite o número do protocolo" required>
+                    <br>
+                    <button type="submit" class="btn btn-success">Buscar</button>
+                </div>
+            </form>
+        </div>
+        
+       {% if servico %}
+          <div class="mt-5 text-start">
+              <h2 class="fw-bold text-success mb-4">Detalhes do Serviço</h2>
+
+              <p><strong>Protocolo:</strong> {{ servico.protocolo }}</p>
+              <p><strong>Nome:</strong> {{ servico.nome }}</p>
+              <p><strong>Email:</strong> {{ servico.email }}</p>
+              <p><strong>Telefone:</strong> {{ servico.telefone }}</p>
+              
+              <p><strong>Serviço Solicitado:</strong>
+                  {% if servico.categoria.exists %}
+                      {% for categoria in servico.categoria.all %}
+                          <span class="badge bg-success">{{ categoria.nome }}</span>
+                      {% endfor %}
+                  {% else %}
+                      <span class="text-muted">Sem categorias.</span>
+                  {% endif %}
+              </p>
+
+              <p><strong>Descrição:</strong> {{ servico.descricao|default:"Sem descrição disponível." }}</p>
+              <p><strong>Status:</strong> {{ servico.get_status_display }}</p>
+              <p><strong>Data da Solicitação:</strong> {{ servico.data_criacao|date:"d/m/Y H:i" }}</p>
+              <p><strong>Última Atualização:</strong> {{ servico.data_atualizacao|date:"d/m/Y H:i" }}</p>
+              <form action="{% url 'cancelar_servico' servico.protocolo %}" method="post">
+                {% csrf_token %}
+                <button type="submit" class="btn btn-danger mt-3" {% if servico.status in STATUS_NAO_CANCELAVEL %} disabled {% endif %}>
+                    Cancelar Serviço
+                </button> 
+              </form>
+              {% include 'partials/anexos.html' %}
+
+          </div>
+        {% endif %}
+
+
+            
+    </div>
+  </div>
+</div>
+{% endblock   %}
+{% block footer %}
+  {% include 'partials/footer_m.html' %}
+{% endblock footer %}

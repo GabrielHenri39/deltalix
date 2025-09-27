@@ -1,0 +1,46 @@
+{% load custom_filters %}
+{% if anexos %}
+                    <div class="mt-5 text-start">
+                      <h3 class="fw-bold text-success mb-3">Anexos</h3>
+                      <div class="anexos-container">
+                        {% for file in anexos %}
+                          {% with nome=file.arquivo.name|lower %}
+                            <div class="anexo-card">
+                              <a href="{{ file.arquivo.url }}" target="_blank">
+                                <span class="icon">
+                                  {% if nome|endswith:".pdf" %}
+                                    📄
+                                  {% elif nome|endswith:".jpg" or nome|endswith:".jpeg" or nome|endswith:".png" or nome|endswith:".gif" %}
+                                    🖼️
+                                  {% elif nome|endswith:".doc" or nome|endswith:".docx" %}
+                                    📝
+                                  {% elif nome|endswith:".xls" or nome|endswith:".xlsx" or nome|endswith:".csv" %}
+                                    📊
+                                  {% elif nome|endswith:".zip" or nome|endswith:".rar" %}
+                                    📦
+                                  {% else %}
+                                    📂
+                                  {% endif %}
+                                </span>
+                                {{ file.arquivo.name|basename }}
+                              </a>
+                              <br>
+                              {% if user.is_authenticated %}
+                                <form method="post" action="{% url 'deletar_anexo' file.id %}" class="d-inline">
+                                  {% csrf_token %}
+                                  <button type="submit" class="btn btn-sm btn-danger mt-2" onclick="return confirm('Tem certeza que deseja excluir este anexo?');">Excluir</button>
+                                </form>
+                                
+                              {% endif %}
+                                
+                            
+                            </div>
+                          {% endwith %}
+                        {% endfor %}
+                      </div>
+                    </div>
+                  {% else %}
+                    {% if servico %}
+                      <p class="mt-4 text-muted">Nenhum anexo encontrado para este serviço.</p>
+                    {% endif %}
+{% endif %} 

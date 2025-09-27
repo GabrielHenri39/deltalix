@@ -1,0 +1,76 @@
+{% extends 'base/base.html' %}
+{% load static %}
+
+{% block 'title' %}Home Page{% endblock 'title' %}
+
+{% block 'head'%}
+  <link rel="stylesheet" href="{% static 'home/css/home.css' %}">
+  <meta name="description" content="DELTALIX AMBIENTAL - Especialista em gerenciamento completo de resíduos industriais e comerciais. Soluções sustentáveis desde 1999, alinhadas com a NBR 10.004 da ABNT e a Política Nacional de Resíduos Sólidos (PNRS).">
+  <meta name="keywords" content="DELTALIX AMBIENTAL, gerenciamento de resíduos, resíduos industriais, resíduos comerciais, sustentabilidade, NBR 10.004, ABNT, Política Nacional de Resíduos Sólidos, PNRS, soluções ambientais, reciclagem, tratamento de resíduos">
+  <meta name="author" content="DELTALIX AMBIENTAL">
+  <link rel="canonical" href="https://www.deltalixambiental.com.br/">
+{% endblock 'head'%}
+
+{% block nav %}
+  {% include 'partials/navebar.html' %}
+{% endblock nav %}
+
+{% block content %}
+
+<section class="container py-5">
+  <div class="row align-items-center">
+    <div class="col-12 col-md-10 mx-auto">
+      <h1 class="fw-bold text-success mb-3">DELTALIX AMBIENTAL</h1>
+      <h2 class="h4 text-secondary mb-4">Transformando resíduos em sustentabilidade desde 1999.</h2>
+      <p class="lead-p">
+        A <strong >DELTALIX AMBIENTAL</strong> é especialista no gerenciamento completo de resíduos industriais e comerciais.
+        Com o crescente desafio da geração excessiva de resíduos e a busca por uma disposição final ambientalmente segura, 
+        nosso compromisso é oferecer soluções que minimizem o impacto ao ambiente e à saúde, alinhados com as exigências da 
+        <strong>NBR 10.004 da ABNT</strong> e as premissas da <strong>Política Nacional de Resíduos Sólidos (PNRS)</strong>.
+      </p>
+      <p class="text-muted">
+        A gestão atual opera desde 1999 buscando soluções ambientalmente adequadas para todos os resíduos gerados nas atividades das empresas onde prestamos serviços.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="container py-4">
+  <h2 class="text-success fw-bold mb-4 text-center">Nossas Soluções Abrangentes</h2>
+
+  <div class="row g-4">
+    <div class="col-md-4">
+      <div class="h-100 p-3 border rounded shadow-sm">
+        <h4 class="fw-semibold text-success">Gerenciamento de Resíduos Sólidos</h4>
+        <p class="text-muted">
+          Os resíduos sólidos são um problema ambiental que exige manejo adequado. Na <strong>DELTALIX AMBIENTAL</strong>, seu gerenciamento é conduzido de forma estratégica, seja pelo tratamento, disposição final ou reciclagem. Garantimos que os resíduos industriais sejam segregados, tratados e/ou destinados adequadamente de acordo com suas características e regulamentações.
+        </p>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="h-100 p-3 border rounded shadow-sm">
+        <h4 class="fw-semibold text-success">Sustentabilidade Urbana</h4>
+        <p class="text-muted">
+          Em um cenário global onde a preocupação com os resíduos sólidos tem aumentado, a <strong>DELTALIX AMBIENTAL</strong> contribui para a sustentabilidade urbana através da adoção de padrões de produção e consumo responsáveis. Nossa atuação visa a redução significativa dos impactos ambientais e na saúde, promovendo um futuro mais equilibrado.
+        </p>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="h-100 p-3 border rounded shadow-sm">
+        <h4 class="fw-semibold text-success">Gestão Ambiental Eficiente</h4>
+        <p class="text-muted">
+          Atuamos com foco na eficiência operacional e no cumprimento das exigências legais e ambientais, proporcionando soluções personalizadas para cada cliente.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}
+{% block footer %}
+  {% include 'partials/footer_m.html' %}
+{% endblock footer %}
+
+
