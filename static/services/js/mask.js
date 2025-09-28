@@ -19,7 +19,7 @@ $(function () {
             }
 
             // Máscara dinâmica: coloca hífen antes dos últimos 4 dígitos
-            return 'PROTO-000000000000000000-0000';
+            return 'PROTO-00000000000000000000-0000';
         };
 
         var protoOptions = {

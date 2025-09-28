@@ -68,6 +68,7 @@ def protocolo(request: HttpRequest, protocolo: str) -> HttpResponse:
 def consulta_servico(request: HttpRequest) -> HttpResponse:
     """Consultar um serviço pelo protocolo."""
     protocolo = request.GET.get('protocolo') or request.POST.get('protocolo')
+    print(protocolo)
     servico = None
     anexos = []  # garante inicialização
     STATUS_NAO_CANCELAVEL = ['Cancelado', 'concluido', 'em_andamento']
