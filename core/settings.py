@@ -38,7 +38,7 @@ ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', 'localhost').split(',')
 if DEBUG:
     SITE_URL = 'http://localhost:8000'
 else:
-    SITE_URL = 'https://deltalixabiental.com.br'
+    SITE_URL = 'https://deltalixambiental.com.br'
 
 
 # Application definition
@@ -180,6 +180,7 @@ else:
     EMAIL_USE_TLS = True
     EMAIL_HOST_USER = os.getenv('EMAIL_HOST_USER')
     EMAIL_HOST_PASSWORD = os.getenv('EMAIL_HOST_PASSWORD')
+    DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 
 INTERNAL_IPS = [
     '127.0.0.1',
